@@ -1,0 +1,14 @@
+version: "3"
+services: 
+  react-app:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src
+    environment:
+      - REACT_APP_NAME=CRUD
+      - CHOKIDAR_USEPOLLING=true
+    #env_file:
+    #  -
+    
